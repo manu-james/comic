@@ -64,6 +64,13 @@ class productController extends Controller
         return redirect('/adminorder');
 
     }
+    public function orderdelete1($id)
+    {
+        $delete=DB::table('ordermodels')->where('id',$id)->delete();
+
+        return redirect('/buy');
+
+    }
 
 
 

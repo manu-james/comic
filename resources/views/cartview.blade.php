@@ -133,7 +133,7 @@
           <a class="nav-link" href="/buy">ORDERS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/search">SEARCH</a>
+          <a class="nav-link" href="/viewsearch">SEARCH</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/logout">LOGOUT</a>

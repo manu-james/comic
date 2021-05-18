@@ -100,3 +100,4 @@ Route::post('/addtoorder',[productController::class,'addtoorder']);
 Route::get('orderdelete/{id}',[productController::class,'orderdelete']);
 Route::get('/adminorder',[productController::class , 'orderview' ] );
 Route::get('/adminorder',[productController::class , 'orderviewadmin' ] );
+Route::get('orderdelete1/{id}',[productController::class,'orderdelete1']);

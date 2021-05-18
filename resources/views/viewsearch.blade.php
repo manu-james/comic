@@ -132,6 +132,9 @@
           <a class="nav-link" href="/cartview">ADD TO CART</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="/buy">ORDERS</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="/viewsearch">SEARCH</a>
         </li>
         <li class="nav-item">
