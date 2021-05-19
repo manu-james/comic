@@ -147,6 +147,11 @@
         <section class="module-extra-small bg-dark">
           
         </section>
+        <div class="container">
+<div class="row">
+
+ <div class="col col-12 col-sm-6 col-md-6 col-lg-6col-xl-6 col-xxl-6 ">
+ <br><br><div class="container" style="background-color: #EBEBEB;">
         <form action="addtoorder" method="post"> @csrf 
          @foreach($cats as $item)
          <input type="hidden" name="ComicbookId" value= "{{$item->ComicbookId}}">
@@ -169,9 +174,19 @@
      <td><a class="btn btn-warning" href="cartdelete/{{$item->id}}">REMOVE</a></td>
     </tr>
 </table>
+</div>
 
+ <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+</div>
+</div>
+</div>
+</div>
 @endforeach
-<button type="submit" class="btn btn-primary">BUY</button>
+<div class="container">
+<div class="col col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5 "></div>
+<div class="col col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 "><div class="row"><button  type="submit" class="btn btn-primary">BUY</button></div></div>
+</div>
+
 
 
 </form>

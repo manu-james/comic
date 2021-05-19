@@ -54,6 +54,7 @@ class productController extends Controller
             $ordermodels->ComicbookName=$request->ComicbookName;
             $ordermodels->ComicbookPrice=$total;
             $ordermodels->save();
+           
 
             if($ordermodels)
             {

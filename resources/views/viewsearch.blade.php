@@ -148,7 +148,7 @@
       <section class="bg-dark-30 showcase-page-header module parallax-bg" data-background="https://wallpapercave.com/wp/wp2483329.jpg">
         <div class="titan-caption">
           <div class="caption-content">
-            <div class="font-alt mb-30 titan-title-size-1"><h1>COMIC BOOK-HORROR</h1></div>
+            <div class="font-alt mb-30 titan-title-size-1"><h1>SEARCH</h1></div>
             <form class="form-inline" action="/servicesearch"  method="post">
             {{csrf_field() }}
         <input type="search" name="sname" class="form-control rounded" placeholder="Search" aria-label="Search"
