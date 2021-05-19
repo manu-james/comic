@@ -12,10 +12,8 @@ use App\Http\Controllers\Fantasycontroller;
 use App\Http\Controllers\Horrorcontroller;
 use App\Http\Controllers\Fictioncontroller;
 use App\Http\Controllers\MainController;
-
 use App\Http\Controllers\productController;
 use App\Http\Controllers\Adminhomecontroller;
-
 use App\Http\Controllers\childrencontroller;
 use App\Http\Controllers\indexcontroller;
 
@@ -101,3 +99,9 @@ Route::get('orderdelete/{id}',[productController::class,'orderdelete']);
 Route::get('/adminorder',[productController::class , 'orderview' ] );
 Route::get('/adminorder',[productController::class , 'orderviewadmin' ] );
 Route::get('orderdelete1/{id}',[productController::class,'orderdelete1']);
+
+Route::get('/customers',[productController::class ,'customers'] );
+Route::get('/customeradmin',[productController::class ,'customeradmin'] );
+Route::get('customerdelete/{id}',[productController::class,'customerdelete']);
+
+Route::get('/',[productController::class,'blank']);

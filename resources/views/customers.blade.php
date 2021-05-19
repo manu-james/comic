@@ -13,22 +13,23 @@
  <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8 ">
  <br><br><div class="container" style="background-color: #EBEBEB;">
  <form >
-         @foreach($order as $item)
+         @foreach($customers as $item)
          
         <table class="table ">
         <tr>
-        <th scope="row">User ID</th>
-        <th scope="row">Comicbook ID</th>
-         <th scope="row">Comicbook Name</th>
-         <th scope="row">Comicbook Price</th>
+        <th scope="row">USER ID</th>
+        <th scope="row">USER NAME</th>
+        <th scope="row">EMAIL</th>
+         <th scope="row">PHONE NO</th>
+         <th scope="row">ADDRESS</th>
          </tr>
     <tr >
      <!-- <td>{{$item->usname}}</td> -->
-     <td ><a href="customers">{{$item->email}}</a></td>
-     <td>{{$item->ComicbookId}}</td>
-     <td>{{$item->ComicbookName}}</td>
-     <td>{{$item->ComicbookPrice}}</td>
-     <td><a class="btn btn-warning" href="orderdelete/{{$item->id}}">CANCEL</a></td>
+     <td ><a >{{$item->id}}</a></td>
+     <td ><a >{{$item->name}}</a></td>
+     <td>{{$item->email}}</td>
+     <td>{{$item->mobile}}</td>
+     <td>{{$item->address}}</td>
     </tr>
 </table>
 @endforeach

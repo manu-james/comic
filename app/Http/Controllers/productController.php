@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\ordermodel;
 use Illuminate\Http\Request;
 use App\Models\categorymodel;
+use App\Models\Admin;
 use App\Models\productmodel;
 use App\Models\cartmodel;
 
@@ -13,8 +14,29 @@ use DB;
 
 class productController extends Controller
 {
-   
+    public function blank()
+    {
+        return view('blank');
+    }
+    public function customerdelete($id)
+    {
+       
+            $delete2=DB::table('ordermodels')->where('email',$id)->delete();
+            return redirect('/customeradmin');
+       
+        
 
+    }
+    public function customers()
+    {
+        $customers=Admin::all();
+        return view('customers',compact('customers'));
+    }
+    public function customeradmin()
+    {
+        $customeradmin=Admin::all();
+        return view('customeradmin',compact('customeradmin'));
+    }
     public function addtoorder(Request $request)
     {
 
@@ -26,6 +48,7 @@ class productController extends Controller
         ->join('productmodels', 'cartmodels.ComicbookId', '=', 'productmodels.ComicbookId')
         ->where('cartmodels.email', $email)
         ->sum('productmodels.ComicbookPrice');    
+       // $totalbooks= DB::table('cartmodels')->where('cartmodels.email', $email)->select(CONCAT('cartmodels.email'))->get();
             $ordermodels->email=session('LoggedUser');//$request->session()->get('newmodel')['id'];
             $ordermodels->ComicbookId=$request->ComicbookId;
             $ordermodels->ComicbookName=$request->ComicbookName;
@@ -35,7 +58,8 @@ class productController extends Controller
             if($ordermodels)
             {
                 //return redirect('product');
-                
+                $id=$email;
+                $delete=DB::table('cartmodels')->where('email',$id)->delete();
                 return back()->with('success','order Successfuly');
             }
         else

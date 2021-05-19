@@ -27,6 +27,8 @@
           <a class="dropdown-item" href="/addproduct">ADD PRODUCT</a>
           <a class="dropdown-item" href="/addcategory">ADD CATEGORY</a>
           <a class="dropdown-item" href="/adminorder">CUSTOMERS ORDERS</a>
+          <a class="dropdown-item" href="/customeradmin">CUSTOMER VIEW</a>
+          
      
           
           
