@@ -187,7 +187,7 @@
 </form>
 
         <div class="container"> 
-      <div class="scroll-up"><a href=""><h1></h1></a></div>
+      <div class="scroll-up"><a href=""><h1>{{$total}}</h1></a></div>
     </main>
    
     <!--  

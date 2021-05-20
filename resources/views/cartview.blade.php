@@ -155,7 +155,6 @@
         <form action="addtoorder" method="post"> @csrf 
         
          <input type="hidden" name="ComicbookId" value= "{{$item->ComicbookId}}">
-         <input type="hidden" name="email" value= "{{$item->email}}">
          <input type="hidden" name="ComicbookName" value= "{{$item->ComicbookName}}">
          <input type="hidden" name="ComicbookPrice" value= "{{$item->ComicbookPrice}}">
         <table class="table ">
