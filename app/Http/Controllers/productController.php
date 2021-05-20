@@ -70,8 +70,8 @@ class productController extends Controller
         $products=productmodel::all();
         $email=session('LoggedUser');//$request->session()->get('newmodel')['id'];
         $carts=cartmodel::all();
-        $total=$product= DB::table('cartmodels')
-        ->join('productmodels', 'cartmodels.ComicbookId', '=', 'productmodels.ComicbookId')->where('cartmodels.email', $email)->sum('productmodels.ComicbookPrice');    
+        // $total=$product= DB::table('cartmodels')
+        // ->join('productmodels', 'cartmodels.ComicbookId', '=', 'productmodels.ComicbookId')->where('cartmodels.email', $email)->sum('productmodels.ComicbookPrice');    
         return view('buy',compact('order','total'));
         
     }
