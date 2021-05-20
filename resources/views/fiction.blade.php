@@ -127,7 +127,7 @@
               <!--                        i.fa.fa-search-->
               </li>
               <li class="nav-item">
-          <a class="nav-link" href="/cartview">ADD TO CARTY</a>
+          <a class="nav-link" href="/cartview">CARTY</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/viewsearch">SEARCH</a>
