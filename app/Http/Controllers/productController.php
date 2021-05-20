@@ -150,7 +150,7 @@ class productController extends Controller
             {
                 //return redirect('product');
                 
-                return back()->with('success','Successfuly added to cart');
+                return redirect('/buy');
             }
         else
         {
