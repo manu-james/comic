@@ -10,12 +10,6 @@
     
 </head>
 <body>
-
-<div class="bg-image"
-  style="
-    background-image: url('https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bWFydmVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80');
-    height: 100vh; "
->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     
@@ -31,6 +25,12 @@
     </div>
   </div>
 </nav>
+<div class="bg-image"
+  style="
+    background-image: url('https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bWFydmVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80');
+    height: 100vh; "
+>
+
 
 
     <div class="container">
