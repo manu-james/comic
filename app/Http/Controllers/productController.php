@@ -45,7 +45,7 @@ class productController extends Controller
        
        
        // $totalbooks= DB::table('cartmodels')->where('cartmodels.email', $email)->select(CONCAT('cartmodels.email'))->get();
-            $ordermodels->email=$request->email;//$request->session()->get('newmodel')['id'];
+            $ordermodels->email=session('LoggedUser');//$request->session()->get('newmodel')['id'];
             $ordermodels->ComicbookId=$request->ComicbookId;
             $ordermodels->ComicbookName=$request->ComicbookName;
             $ordermodels->ComicbookPrice=$request->ComicbookPrice;
@@ -67,7 +67,10 @@ class productController extends Controller
     public function orderview()
     {
         $order=ordermodel::all();
-        
+        $products=productmodel::all();
+        $email=session('LoggedUser');//$request->session()->get('newmodel')['id'];
+        $carts=cartmodel::all();
+       
          return view('buy',compact('order'));
        
     }
