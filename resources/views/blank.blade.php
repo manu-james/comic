@@ -10,6 +10,12 @@
     
 </head>
 <body>
+
+<div class="bg-image"
+  style="
+    background-image: url('https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bWFydmVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80');
+    height: 100vh; "
+>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     
@@ -25,20 +31,16 @@
     </div>
   </div>
 </nav>
-<div class="bg-image"
-  style="
-    background-image: url('https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bWFydmVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80');
-    height: 100vh; "
->
-
 
 
     <div class="container">
     <div class="row" style ="margin-top:200px">
     <form style="background-color: #EBEBEB;"><div>
 <h1 style="font-size:5vw; text-align:center;" stype="">COMIC BOOKS STORE</h1>
-</div></form>
 
+</div></form>
+<a class="btn btn-light" style="text-align:center;" aria-current="page" href="{{ route('auth.register') }}">SIGN-IN</a>
+<a class="btn btn-secondary" style="text-align:center;" href="{{ route('auth.login') }}">LOGIN</a>
 
     <div class="col col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3"></div>
     
