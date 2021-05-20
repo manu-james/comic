@@ -150,7 +150,7 @@ class productController extends Controller
             {
                 //return redirect('product');
                 
-                return redirect('/orderview');
+                return redirect('/cartview');
             }
         else
         {
