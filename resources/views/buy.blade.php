@@ -147,8 +147,14 @@
         <section class="module-extra-small bg-dark">
             
         </section>
+        @foreach($order as $item)
+        <div class="container">
+<div class="row">
+
+ <div class="col col-12 col-sm-6 col-md-6 col-lg-6col-xl-6 col-xxl-6 ">
+ <br><br><div class="container" style="background-color: #EBEBEB;">
         <form >
-         @foreach($order as $item)
+        
          
         <table class="table ">
         <tr>
@@ -167,15 +173,23 @@
      <td><a class="btn btn-warning" href="orderdelete1/{{$item->id}}">CANCEL</a></td>
     </tr>
 </table>
+</div>
 
+ <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+</div>
+</div>
+</div>
+</div>
 @endforeach
 
 
 
 </form>
-        
-      <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
+
+        <div class="container"> 
+      <div class="scroll-up"><a href=""><h1>{{$total}}</h1></a></div>
     </main>
+   
     <!--  
     JavaScripts
     =============================================

@@ -40,27 +40,22 @@ class productController extends Controller
     public function addtoorder(Request $request)
     {
 
-        $products=productmodel::all();
-        $carts=cartmodel::all();
+       
         $ordermodels=new ordermodel();
-        $email=$carts->email=session('LoggedUser');//$request->session()->get('newmodel')['id'];
-        $total= $products= DB::table('cartmodels')
-        ->join('productmodels', 'cartmodels.ComicbookId', '=', 'productmodels.ComicbookId')
-        ->where('cartmodels.email', $email)
-        ->sum('productmodels.ComicbookPrice');    
+       
+       
        // $totalbooks= DB::table('cartmodels')->where('cartmodels.email', $email)->select(CONCAT('cartmodels.email'))->get();
             $ordermodels->email=session('LoggedUser');//$request->session()->get('newmodel')['id'];
             $ordermodels->ComicbookId=$request->ComicbookId;
             $ordermodels->ComicbookName=$request->ComicbookName;
-            $ordermodels->ComicbookPrice=$total;
+            $ordermodels->ComicbookPrice=$request->ComicbookPrice;
             $ordermodels->save();
            
 
             if($ordermodels)
             {
                 //return redirect('product');
-                $id=$email;
-                $delete=DB::table('cartmodels')->where('email',$id)->delete();
+               
                 return back()->with('success','order Successfuly');
             }
         else
@@ -72,8 +67,13 @@ class productController extends Controller
     public function orderview()
     {
         $order=ordermodel::all();
-      return view('buy',compact('order'));
-
+        $products=productmodel::all();
+        $email=session('LoggedUser');//$request->session()->get('newmodel')['id'];
+        $carts=cartmodel::all();
+        $total=$product= DB::table('cartmodels')
+        ->join('productmodels', 'cartmodels.ComicbookId', '=', 'productmodels.ComicbookId')->where('cartmodels.email', $email)->sum('productmodels.ComicbookPrice');    
+        return view('buy',compact('order','total'));
+        
     }
     public function orderviewadmin()
     {
